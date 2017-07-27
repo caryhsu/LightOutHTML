@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
-$(document).ready(function(){
+$(window).bind( 'orientationchange', function(e){
+    var ori = window.orientation;
+    alert(ori);
+});
+
+$(document).ready(function() {
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+    var W = 5;
+    var H = 5;
+    var size = Math.max(w, h);
     $("circle").css("fill", "red");
     //$("circle").css("cursor", "hand");
     //$("text").css("cursor", "hand");
