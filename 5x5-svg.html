@@ -7,8 +7,16 @@ $(document).ready(function(){
     $("circle").css("fill", "red");
     //$("circle").css("cursor", "hand");
     //$("text").css("cursor", "hand");
-    $("circle").click(function(event){
-        $(event.target).css("fill", "yellow");
+    $("circle").click(function(event) {
+        var parpared = $(event.target).data("prepared", true);
+        $("circle").data("prepared", false);
+        if (parpared) {
+            $(event.target).css("fill", "green");
+            $(event.target).data("prepared", true);
+        }
+        else {
+            $(event.target).css("fill", "yellow");
+        }
     });
     $("text").click(function(event){
         $($(event.target).prev()).css("fill", "yellow");
