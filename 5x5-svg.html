@@ -10,6 +10,9 @@ $(document).ready(function(){
     $("circle").click(function(event){
         $(event.target).css("fill", "yellow");
     });
+    $("text").click(function(event){
+        $($(event.target).prev()).css("fill", "yellow");
+    });
     //$("circle").mouseout(function(event){
     //    $(event.target).css("fill", "red");
     //});
