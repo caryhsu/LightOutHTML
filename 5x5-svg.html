@@ -5,14 +5,14 @@
 <script>
 $(document).ready(function(){
     $("circle").css("fill", "red");
-    $("circle").css("cursor", "hand");
-    $("text").css("cursor", "hand");
-    $("circle").mouseover(function(event){
+    //$("circle").css("cursor", "hand");
+    //$("text").css("cursor", "hand");
+    $("circle").click(function(event){
         $(event.target).css("fill", "yellow");
     });
-    $("circle").mouseout(function(event){
-        $(event.target).css("fill", "red");
-    });
+    //$("circle").mouseout(function(event){
+    //    $(event.target).css("fill", "red");
+    //});
 });
 </script>
 </head>
